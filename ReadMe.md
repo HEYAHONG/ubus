@@ -19,3 +19,13 @@
 - 构建(`cmake --build .`)
 - 安装到系统(`sudo cmake --build . -t install`)
 
+# 安装
+
+默认情况下，ubusd不会自动启动,可将ubus设置为自动启动方便调试。
+
+对于采用systemd作为init的系统，可进行如下操作：
+
+- 使能ubus:`sudo systemctl enable ubus`
+- 启动ubus:`sudo systemctl start ubus`
+- 停止ubus:`sudo systemctl stop ubus`
+- 重启ubus:`sudo systemctl restart ubus`

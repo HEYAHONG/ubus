@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenWrt micro bus
+Requires=ubus.socket
+DefaultDependencies=no
+Wants=sysinit.target
+After=sysinit.target basic.target
+
+[Service]
+ExecStart=@UBUSD_BINARY@
+
+[Install]
+WantedBy=multi-user.target
+

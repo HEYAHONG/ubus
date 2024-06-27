@@ -58,6 +58,7 @@ ADD_EXECUTABLE(cli cli.c)
 SET_TARGET_PROPERTIES(cli PROPERTIES OUTPUT_NAME ubus)
 TARGET_LINK_LIBRARIES(cli ubus ${ubox_library} ${blob_library} ${json})
 
+ADD_SUBDIRECTORY(systemd)
 ADD_SUBDIRECTORY(lua)
 ADD_SUBDIRECTORY(examples)
 
